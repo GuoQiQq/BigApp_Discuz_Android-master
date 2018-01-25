@@ -25,6 +25,7 @@
                 style="@style/go_textview"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/gotextview_height_default"
+                android:visibility="gone"
                 app:GoBackTextView_title="@string/super_settings" />
 
             <include layout="@layout/include_line_thin" />
@@ -34,8 +35,7 @@
                 style="@style/with_segmented_control_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/gotextview_height_default"
-                app:WithSegmentedControlTextView_title="@string/show_go_to_top"
-                />
+                app:WithSegmentedControlTextView_title="@string/show_go_to_top" />
 
             <include
                 layout="@layout/include_line_thin"

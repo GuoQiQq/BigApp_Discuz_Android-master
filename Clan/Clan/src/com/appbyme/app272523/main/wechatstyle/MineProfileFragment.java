@@ -491,7 +491,7 @@ public class MineProfileFragment extends BaseFragment {
      */
     @OnClick(R.id.number_stars)
     public void star(View view) {
-        JumpWebUtils.gotoWeb(getActivity(), "我的星数", "http://app.sqys.com/plugin.php?id=tpgao_medal:m");
+        JumpWebUtils.gotoWeb(getActivity(), "", "http://app.sqys.com/plugin.php?id=tpgao_medal:m#item1");
     }
 
     /**

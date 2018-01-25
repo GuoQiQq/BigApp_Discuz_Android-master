@@ -111,9 +111,9 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                if (webFragment.getWebView().canGoBack() && !webFragment.getWebTitle().equals(null)) {
+                if (webFragment.getWebView().canGoBack()) {
                     if (webFragment.getWebTitle().equals("家医签约百城巡讲活动") || webFragment.getWebTitle().equals("修改资料") || webFragment.getWebTitle().equals("QQ登录") || webFragment.getWebTitle().equals("weixin") ||
-                            webFragment.getWebTitle().equals("充值") || webFragment.getWebTitle().equals("基层医师")){
+                            webFragment.getWebTitle().equals("充值") || webFragment.getWebTitle().equals("基层医师")) {
                         this.finish();
                     } else {
 
