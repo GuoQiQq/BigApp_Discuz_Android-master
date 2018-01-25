@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appbyme.app272523"
+    android:versionCode="@integer/version_code"
+    android:versionName="@string/version_name"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.appbyme.app272523.app.ClanApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:name="com.appbyme.app272523.guide.GuideActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <action android:name="android.intent.action.BADGE_COUNT_UPDATE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appbyme.app272523.guide.SplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+
+        <activity
+            android:name="com.appbyme.app272523.main.qqstyle.QQStyleMainActivity"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.guide.WelcomeGuideActivity"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.guide.MainActivity"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.main.sliding.SlidingStyleMainActivity"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.main.wechatstyle.WeChatStyleMainActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarThemeYellowTabPageIndicator" />
+
+        <activity
+            android:name="com.appbyme.app272523.main.bottomtab.BottomTabMainActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.main.android.PureAndroidMainActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/forum_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+
+        <activity
+            android:name="com.appbyme.app272523.login.LoginActivity"
+            android:label="@string/login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.login.BindActivity"
+            android:label="@string/bind_account"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.login.WebLoginActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.login.RegisterActivity"
+            android:label="@string/register"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.login.CallBackWebActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/register"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.login.YZLoginActivity"
+            android:label="@string/yz_login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.message.pm.MyPMActivityOld"
+            android:label="@string/my_pm"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.message.pm.MyPMActivity"
+            android:label="@string/my_pm"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.myfav.MyFavActivity"
+            android:label="@string/my_favories"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme.Tab.Small" />
+
+        <activity
+            android:name="com.appbyme.app272523.article.ArticleListActivity"
+            android:label="@string/article_list"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.article.ArticleDetailActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/article_detail"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.detail.ThreadDetailActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/thread_detail"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadReplyActivity"
+            android:label="@string/thread_reply"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.profile.thread.OwnerThreadActivity"
+            android:label="@string/my_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme.Tab.Small" />
+        <activity
+            android:name="com.appbyme.app272523.profile.thread.MyThreadActivity"
+            android:label="@string/my_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme.Tab.Small" />
+        <!--<activity-->
+        <!--android:name=".profile.thread.OthersThreadActivity"-->
+        <!--android:label="@string/my_thread"-->
+        <!--android:launchMode="singleTop"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/ActionBarTheme.Tab.Small" />-->
+        <activity
+            android:name="com.appbyme.app272523.profile.homepage.HomePageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.message.pm.ChatActivity"
+            android:label="@string/thread_detail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.forum.ForumActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.forum.ForumTypeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadNewActivity"
+            android:label="@string/new_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadReportActivity"
+            android:label="@string/report"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadPublishActivity"
+            android:label="@string/new_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadPublishActivity1"
+            android:label="@string/new_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadPublishActivity3"
+            android:label="@string/new_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.thread.ThreadPublishActivity2"
+            android:label="@string/new_thread"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.thread.deal.ThreadDealActivity"
+            android:label="@string/default_value"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.common.images.PicSelectorActivity"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.common.images.PicSelectorActivity3"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.common.images.ImagesLookerActivity"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.app.WebActivity"
+            android:hardwareAccelerated="true"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.video.VideoPlayWebActivity"
+            android:hardwareAccelerated="true"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.appbyme.app272523.setting.SettingsActivity"
+            android:label="@string/settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.app.AboutActivity"
+            android:label="@string/about"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+
+        <activity
+            android:name="com.appbyme.app272523.setting.supersetting.SuperSettingsActivity"
+            android:label="@string/super_settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme.Tab.Small" />
+
+        <activity
+            android:name="com.appbyme.app272523.search.SearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name="com.appbyme.app272523.friends.FriendsActivity"
+            android:label="@string/my_friends_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.friends.AddFriendsActivity"
+            android:label="@string/add_friends_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.friends.SearchFriendsActivity"
+            android:label="@string/search_friends"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.appbyme.app272523.friends.NewFriendsActivity"
+            android:label="@string/new_friends_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.friends.ApplyFriendsActivity"
+            android:label="@string/apply_friends_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.act.apply.ActApplyActivity"
+            android:label="@string/apply_act_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.act.publish.ActPublishActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.act.publish.ActSelectTypeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.act.manage.ActManageActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.appbyme.app272523.main.bottomtab.MenuJumpActivity"
+            android:label="@string/default_value"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <!-- ShareSDK start -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.appbyme.app272523.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- ShareSDK end -->
+
+
+
+
+        <!-- imagelib start -->
+        <activity
+            android:name="com.kit.imagelib.HostActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kit.imagelib.photoselector.PicSelectActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.kit.imagelib.imagelooker.ImageBrowserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kit.imagelib.imagelooker.ImagesLookerActivity"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <activity
+            android:name="com.kit.imagelib.banner.MainActivity"
+            android:label="@string/default_value"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+
+        <activity
+            android:name="com.kit.widget.selector.selectonefromlist.SelectOneFromListActivity"
+            android:label="@string/default_value"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
+
+        <!-- imagelib end -->
+
+
+        <!-- analysisSDK Start -->
+        <meta-data
+            android:name="SHARESDK_APPKEY"
+            android:value="${SHARESDK_APPKEY}" />
+        <meta-data
+            android:name="SHARESDK_CHANNEL"
+            android:value="${SHARESDK_CHANNEL}" />
+
+        <!-- service 用于保证一定能够向服务器上传数据 -->
+        <service
+            android:name="cn.sharesdk.server.RemoteService"
+            android:process=":remote" />
+        <!-- 用户反馈的页面 ConversationActivity,反馈联系人页面 ContactActivity -->
+        <activity android:name="cn.sharesdk.feedback.ConversationActivity" />
+        <activity android:name="cn.sharesdk.feedback.ContactActivity" />
+        <!-- analysisSDK End -->
+
+        <service android:name="com.appbyme.app272523.app.service.ClanService" />
+
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.appbyme.app272523" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:authorities="com.appbyme.app272523.DataProvider"
+            android:name="cn.jpush.android.service.DataProvider"
+            android:exported="true"
+            />
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.appbyme.app272523" />
+            </intent-filter>
+        </service>
+
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!--Required  显示通知栏 -->
+                <category android:name="com.appbyme.app272523" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+             <!--Optional -->
+            <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+            <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!--&lt;!&ndash; Required SDK核心功能&ndash;&gt;-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        <!-- Required since 3.0.7 -->
+        <!-- 新的tag/alias接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 该广播需要继承JPush提供的JPushMessageReceiver类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name="com.appbyme.app272523.jpush.MyJPushMessageReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.appbyme.app272523" />
+            </intent-filter>
+        </receiver>
+
+         <!--User defined.  For test only  用户自定义的广播接收器-->
+        <receiver android:name="com.appbyme.app272523.jpush.MyReceiver">
+        <intent-filter>
+        <action android:name="cn.jpush.android.intent.REGISTRATION" />
+        <!--Required  用户注册SDK的intent-->
+        <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+        <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+        <!--Required  用户接收SDK消息的intent-->
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+        <!--Required  用户接收SDK通知栏信息的intent-->
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+        <!--Required  用户打开自定义通知栏的intent-->
+        <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+        <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+        <action android:name="cn.jpush.android.intent.CONNECTION" />
+        <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+        <category android:name="com.appbyme.app272523" />
+        </intent-filter>
+        </receiver>
+
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL}" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="2130b52479c0acf2bcf11194" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--  </>值来自开发者平台取得的AppKey-->
+
+
+    </application>
+
+    <uses-library android:name="com.google.android.browser" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--写内部存储-->
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <!--读内部存储-->
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Required 自定义用来收发消息的相关权限 -->
+    <permission
+        android:name="com.appbyme.app272523.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.appbyme.app272523.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+
+    <!-- ZUK角标 -->
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+
+
+</manifest>

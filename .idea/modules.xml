@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/libs/AnalysisSDK/AnalysisSDK.iml" filepath="$PROJECT_DIR$/libs/AnalysisSDK/AnalysisSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/AppUtils/AppUtils.iml" filepath="$PROJECT_DIR$/libs/AppUtils/AppUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BigApp_Discuz_Android-master.iml" filepath="$PROJECT_DIR$/BigApp_Discuz_Android-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/BottomTabUI/BottomTabUI.iml" filepath="$PROJECT_DIR$/libs/BottomTabUI/BottomTabUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clan/Clan/Clan.iml" filepath="$PROJECT_DIR$/Clan/Clan/Clan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ClanBase/ClanBase.iml" filepath="$PROJECT_DIR$/libs/ClanBase/ClanBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/EasterEgg/EasterEgg.iml" filepath="$PROJECT_DIR$/libs/EasterEgg/EasterEgg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ImageLib/ImageLib.iml" filepath="$PROJECT_DIR$/libs/ImageLib/ImageLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ShareSDK/ShareSDK.iml" filepath="$PROJECT_DIR$/libs/ShareSDK/ShareSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/SlidingMenuLib/SlidingMenuLib.iml" filepath="$PROJECT_DIR$/libs/SlidingMenuLib/SlidingMenuLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/XhsEmoticonsKeyboard/XhsEmoticonsKeyboard.iml" filepath="$PROJECT_DIR$/libs/XhsEmoticonsKeyboard/XhsEmoticonsKeyboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ZUtils/ZUtils.iml" filepath="$PROJECT_DIR$/libs/ZUtils/ZUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ZUtilsExt/ZUtilsExt.iml" filepath="$PROJECT_DIR$/libs/ZUtilsExt/ZUtilsExt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/ZUtilsExtWidget/ZUtilsExtWidget.iml" filepath="$PROJECT_DIR$/libs/ZUtilsExtWidget/ZUtilsExtWidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/android-viewbadger/android-viewbadger.iml" filepath="$PROJECT_DIR$/libs/android-viewbadger/android-viewbadger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/libs/pulltorefresh/pulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/viewpageIndicator/viewpageIndicator.iml" filepath="$PROJECT_DIR$/libs/viewpageIndicator/viewpageIndicator.iml" />
+    </modules>
+  </component>
+</project>

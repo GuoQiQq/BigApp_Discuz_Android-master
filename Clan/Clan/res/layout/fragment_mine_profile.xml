@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_my_info2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/user_settings"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/groupAndRegisterDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/include_gray_split" />
+
+                    <com.kit.widget.textview.WithTitleTextView
+                        android:id="@+id/wttvGroup"
+                        style="@style/with_title_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/gotextview_height_default"
+                        app:WithTitleTextView_margin_left="10dp"
+                        app:WithTitleTextView_title="@string/group_in" />
+
+                    <include layout="@layout/include_line_thin" />
+
+                    <com.kit.widget.textview.WithTitleTextView
+                        android:id="@+id/wttvRegisterDate"
+                        style="@style/with_title_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/gotextview_height_default"
+                        app:WithTitleTextView_margin_left="10dp"
+                        app:WithTitleTextView_title="@string/register_date" />
+
+                </LinearLayout>
+
+                <include layout="@layout/include_gray_split" />
+
+                <RelativeLayout
+                    android:id="@+id/my_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/two"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_my_message" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/two"
+                        android:text="@string/my_message"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_5" />
+
+                    <TextView
+                        android:id="@+id/red_dot"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_circle"
+                        android:gravity="center"
+                        android:text="@string/default_value"
+                        android:textColor="@color/white"
+                        android:textSize="8dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/sign_in1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/date_sign" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/sign_in1"
+                        android:text="签到有奖"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+
+                </RelativeLayout>
+                <include layout="@layout/include_line_thin" />
+                <RelativeLayout
+                    android:id="@+id/my_void"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/my_draft4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/my_void" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/my_draft4"
+                        android:text="我的视频"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+
+                </RelativeLayout>
+
+
+                <!--<include layout="@layout/include_line_thin" />-->
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/my_phone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/selector_list_item"-->
+                <!--android:paddingBottom="@dimen/margin_module"-->
+                <!--android:paddingLeft="@dimen/margin_default_large_large_large"-->
+                <!--android:paddingRight="0dp"-->
+                <!--android:paddingTop="@dimen/margin_module">-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/ivMyFav"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:contentDescription="@string/app_name"-->
+                <!--android:src="@drawable/ic_my_favorite" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_toRightOf="@id/ivMyFav"-->
+                <!--android:text="@string/my_phone"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/text_size_4" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_mine_phone"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="@dimen/text_size_3"/>-->
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="@dimen/content_border"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:contentDescription="@string/app_name"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/ic_arrow_gray" />&ndash;&gt;-->
+
+                <!--</RelativeLayout>-->
+
+                <include layout="@layout/include_line_thin" />
+
+                <RelativeLayout
+                    android:id="@+id/invita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/five"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/inivt_jiang" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/five"
+                        android:text="@string/my_invita"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+
+                <include layout="@layout/include_line_thin" />
+
+
+                <RelativeLayout
+                    android:id="@+id/my_home_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:id="@+id/four"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_my_home_page" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/four"
+                        android:text="@string/my_home_page"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_5" />
+                </RelativeLayout>
+
+                <!--<include layout="@layout/include_line_thin" />-->
+
+
+                <RelativeLayout
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/six"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_about" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/six"
+                        android:text="@string/about"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_5" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+
+                <!--<include layout="@layout/include_line_thin" />-->
+
+                <RelativeLayout
+                    android:id="@+id/recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/seven"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/recharge" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/seven"
+                        android:text="@string/my_recharge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+                <include layout="@layout/include_line_thin" />
+                <RelativeLayout
+                    android:id="@+id/number_stars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/eight"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/start" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/eight"
+                        android:text="@string/my_number_stars"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+
+                <include layout="@layout/include_gray_split" />
+                <RelativeLayout
+                    android:id="@+id/integral_club"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/integral_club1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/integral" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/integral_club1"
+                        android:text="积分兑换"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+
+                </RelativeLayout>
+                <include layout="@layout/include_line_thin" />
+                <RelativeLayout
+                    android:id="@+id/integral_club2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/integral_club3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/jifenjulebu" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/integral_club3"
+                        android:text="积分俱乐部"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+
+                </RelativeLayout>
+                <include layout="@layout/include_line_thin" />
+                <RelativeLayout
+                    android:id="@+id/integral_club4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/integral_club5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/jifenguize" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/integral_club5"
+                        android:text="积分规则"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+                <include layout="@layout/include_line_thin" />
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/my_draft"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/selector_list_item"-->
+                    <!--android:paddingBottom="@dimen/margin_module"-->
+                    <!--android:paddingLeft="@dimen/margin_default_large_large_large"-->
+                    <!--android:paddingRight="0dp"-->
+                    <!--android:paddingTop="@dimen/margin_module">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/my_draft1"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:contentDescription="@string/app_name"-->
+                        <!--android:src="@drawable/ic_my_friend" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_toRightOf="@id/my_draft1"-->
+                        <!--android:text="我的草稿"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="@dimen/text_size_4" />-->
+
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="15dp"-->
+                        <!--android:layout_height="15dp"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="@dimen/content_border"-->
+                        <!--android:contentDescription="@string/app_name"-->
+                        <!--android:src="@drawable/ic_arrow_gray" />-->
+
+                <!--</RelativeLayout>-->
+                <!--<include layout="@layout/include_line_thin" />-->
+
+
+
+                <include layout="@layout/include_gray_split" />
+                <RelativeLayout
+                    android:id="@+id/feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/nine"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/feedback" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/nine"
+                        android:text="@string/my_feedback"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+                <include layout="@layout/include_line_thin" />
+                <RelativeLayout
+                    android:id="@+id/settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_item"
+                    android:paddingBottom="@dimen/margin_module"
+                    android:paddingLeft="@dimen/margin_default_large_large_large"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/margin_module">
+
+                    <ImageView
+                        android:id="@+id/ten"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_setting_orange" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/ten"
+                        android:text="@string/my_setting"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_4" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/content_border"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_gray" />
+                </RelativeLayout>
+
+                <!--<include layout="@layout/include_gray_split" />-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
