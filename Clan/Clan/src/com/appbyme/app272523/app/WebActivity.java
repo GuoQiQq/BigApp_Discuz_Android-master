@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.ViewTreeObserver;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -18,6 +19,7 @@ import com.appbyme.app272523.app.config.AppConfig;
 import com.appbyme.app272523.base.IDClan;
 import com.appbyme.app272523.base.util.AppSPUtils;
 import com.appbyme.app272523.base.util.CookieUtils;
+import com.appbyme.app272523.base.util.jump.JumpWebUtils;
 import com.appbyme.app272523.base.util.theme.ThemeUtils;
 import com.appbyme.app272523.login.LoginActivity;
 import com.appbyme.app272523.thread.detail.MoreActionProviderCallback;
@@ -108,18 +110,35 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         ThemeUtils.initResource(this);
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 if (webFragment.getWebView().canGoBack()) {
-                    if (webFragment.getWebTitle().equals("家医签约百城巡讲活动") || webFragment.getWebTitle().equals("修改资料") || webFragment.getWebTitle().equals("QQ登录") || webFragment.getWebTitle().equals("weixin") ||
-                            webFragment.getWebTitle().equals("充值") || webFragment.getWebTitle().equals("基层医师")) {
-                        this.finish();
-                    } else {
+                    if (webFragment.getWebTitle().contains("2017年第")) {
+                        JumpWebUtils.toWeb1(this, "", "http://app.sqys.com/plugin.php?id=jameson_pdf:jameson_pdf");//view加载完成时回调
+                        webFragment.getWebView().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                            @Override
+                            public void onGlobalLayout() {
+                                webFragment.getWebView().clearHistory();
+                            }
+                        });
+
+                    }else if (webFragment.getWebTitle().contains("试卷")) {
+                        JumpWebUtils.toWeb1(this, "", "http://app.sqys.com/kaoshi/kaoshics.htm");//view加载完成时回调
+                        webFragment.getWebView().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                            @Override
+                            public void onGlobalLayout() {
+                                webFragment.getWebView().clearHistory();
+                            }
+                        });
+                    }  else {
 
                         // 返回键退回
                         webFragment.getWebView().goBack();
                     }
+
+                }else if (webFragment.getWebTitle().equals("家医签约百城巡讲活动") || webFragment.getWebTitle().equals("修改资料") || webFragment.getWebTitle().equals("QQ登录") || webFragment.getWebTitle().equals("weixin") ||
+                        webFragment.getWebTitle().equals("充值") || webFragment.getWebTitle().equals("基层医师")) {
+                    this.finish();
                 } else {
                     this.finish();
                 }
@@ -195,6 +214,7 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
 
 
         myProgressBar = (ProgressBar) findViewById(R.id.myProgressBar);
+        webView = webFragment.getWebView();
         webView = (WebView) findViewById(R.id.webView);
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
@@ -219,7 +239,7 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
                         intent.setData(Uri.parse(url));
                         startActivity(intent);
                         return true;
-                    } else {
+                    }else {
                         Map<String, String> extraHeaders = new HashMap<String, String>();
                         extraHeaders.put("Referer", "http://app.sqys.com");
                         wv.loadUrl(url, extraHeaders);
@@ -252,48 +272,6 @@ public class WebActivity extends com.kit.extend.ui.web.WebActivity {
         callback.doShare();
     }
 
-    //h5更换头像
-//    @JavascriptInterface
-//    public void openPhoto() {
-//
-//        // 启动本地相册
-//        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//        intent.setType("image/*");
-//        intent.putExtra("crop", "true"); //使用系统自带的裁剪
-//        intent.putExtra("aspectX", 1);
-//        intent.putExtra("aspectY", 1); //两行表示裁剪宽高比为1:1
-////        intent.putExtra("outputX", WIDTH);
-////        intent.putExtra("outputY", HEIGTH); //裁剪以后输出的宽高值
-//        intent.putExtra("return-data", true); // 返回得到的数据
-//        startActivityForResult(intent,2);
-////        onActivityResult(PHOTO, ImageLibRequestResultCode.REQUEST_SELECT_PIC,intent);
-//
-//    }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (data != null) {
-//            Bitmap bitmap = null;
-//            if (data.hasExtra("data"))   // 首先会判断data中是否存在"data"值
-//            {
-//                bitmap = data.getParcelableExtra("data");  // 存在就可以直接取了
-//            } else // 不存在的时候则是可以通过BitmapFactory来获取bitmap的值
-//            {
-//                BitmapFactory.Options options = new BitmapFactory.Options();
-//                InputStream is = null;
-//                try {
-//                    is = getContentResolver().openInputStream(data.getData());
-//                    bitmap = BitmapFactory.decodeStream(is, null, options);
-//                } catch (Exception e) {
-//                } finally {
-//                    try {
-//                        is.close();
-//                    } catch (Exception e) {
-//                    }
-//                }
-//            }
-//        }
-//    }
 
     private void getData(final boolean isJumpPage) {
 

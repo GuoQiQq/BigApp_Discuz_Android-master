@@ -17,6 +17,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.kit.extend.R;
+import com.kit.utils.BrowserUtils;
+import com.kit.utils.ClipboardUtils;
+import com.kit.utils.StringUtils;
+import com.kit.utils.ToastUtils;
 import com.kit.utils.ZogUtils;
 import com.tencent.mm.opensdk.utils.Log;
 
@@ -58,33 +62,32 @@ public class MoreActionWebProvider extends ActionProvider {
 
         subMenu.clear();
 
-//        subMenu.add(activity.getString(R.string.menu_web_open_in_bowser))
-//                .setIcon(R.drawable.ic_bowser_white)
-//                .setOnMenuItemClickListener(new OnMenuItemClickListener() {
-//                    @Override
-//                    public boolean onMenuItemClick(MenuItem item) {
-//                        ZogUtils.printError(MoreActionWebProvider.class, "activity.webFragment.loadingUrl:" + activity.webFragment.loadingUrl);
-//                        if (!StringUtils.isEmptyOrNullOrNullStr(activity.webFragment.loadingUrl))
-//                            BrowserUtils.gotoBrowser(activity, activity.webFragment.loadingUrl);
-//                        return true;
-//                    }
-//                });
-//
-//        subMenu.add(activity.getString(R.string.menu_web_copy_url))
-//                .setIcon(R.drawable.abc_ic_menu_copy_mtrl_am_alpha)
-//                .setOnMenuItemClickListener(new OnMenuItemClickListener() {
-//                    @Override
-//                    public boolean onMenuItemClick(MenuItem item) {
-//
-//                        ZogUtils.printError(MoreActionWebProvider.class, "activity.webFragment.loadingUrl:" + activity.webFragment.loadingUrl);
-//                        if (!StringUtils.isEmptyOrNullOrNullStr(activity.webFragment.loadingUrl)) {
-//                            ClipboardUtils.copy(activity, activity.webFragment.loadingUrl);
-//                            ToastUtils.mkShortTimeToast(activity, activity.getResources().getString(R.string.copy_ok_default));
-//                        }
-//                        return true;
-//                    }
-//                });
-//
+        subMenu.add(activity.getString(R.string.menu_web_open_in_bowser))
+                .setIcon(R.drawable.ic_bowser_white)
+                .setOnMenuItemClickListener(new OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        ZogUtils.printError(MoreActionWebProvider.class, "activity.webFragment.loadingUrl:" + activity.webFragment.loadingUrl);
+                        if (!StringUtils.isEmptyOrNullOrNullStr(activity.webFragment.loadingUrl))
+                            BrowserUtils.gotoBrowser(activity, activity.webFragment.loadingUrl);
+                        return true;
+                    }
+                });
+
+        subMenu.add(activity.getString(R.string.menu_web_copy_url))
+                .setIcon(R.drawable.abc_ic_menu_copy_mtrl_am_alpha)
+                .setOnMenuItemClickListener(new OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+
+                        ZogUtils.printError(MoreActionWebProvider.class, "activity.webFragment.loadingUrl:" + activity.webFragment.loadingUrl);
+                        if (!StringUtils.isEmptyOrNullOrNullStr(activity.webFragment.loadingUrl)) {
+                            ClipboardUtils.copy(activity, activity.webFragment.loadingUrl);
+                            ToastUtils.mkShortTimeToast(activity, activity.getResources().getString(R.string.copy_ok_default));
+                        }
+                        return true;
+                    }
+                });
 
         subMenu.add(activity.getString(R.string.share))
                 .setIcon(R.drawable.ic_share)
@@ -96,6 +99,7 @@ public class MoreActionWebProvider extends ActionProvider {
                         return true;
                     }
                 });
+
     }
 
     public Bitmap shotActivityNoBar(Activity activity) {

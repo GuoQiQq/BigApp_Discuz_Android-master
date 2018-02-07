@@ -73,4 +73,5 @@ public class ClanApplication extends Application {
     public static ClanApplication getApplication() {
         return clanApplication;
     }
+
 }

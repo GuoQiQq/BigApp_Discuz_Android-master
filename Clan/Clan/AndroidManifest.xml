@@ -115,6 +115,12 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
+        <activity
+            android:name="com.appbyme.app272523.app.MyWebActivity"
+            android:label=""
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActionBarTheme" />
 
         <activity
             android:name="com.appbyme.app272523.login.WebLoginActivity"
@@ -294,7 +300,7 @@
             android:name="com.appbyme.app272523.app.WebActivity"
             android:hardwareAccelerated="true"
             android:label=""
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/ActionBarTheme" />
         <activity

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.appbyme.app272523.R;
+import com.appbyme.app272523.app.MyWebActivity;
 import com.appbyme.app272523.app.WebActivity;
 import com.appbyme.app272523.app.config.AppConfig;
 import com.appbyme.app272523.app.constant.Key;
@@ -365,6 +366,12 @@ public class MineProfileFragment extends BaseFragment {
             intent.putExtra(Key.KEY_PROFILE, mProfileVariables);
         }
         jump(intent);
+    }
+    @OnClick(R.id.test)
+    public void test(View view) {
+        Intent intent = new Intent();
+        intent.setClass(getActivity(),MyWebActivity.class);// 用来打开同一个应用程序中的Activity或Service
+        startActivity(intent);
     }
 
 
