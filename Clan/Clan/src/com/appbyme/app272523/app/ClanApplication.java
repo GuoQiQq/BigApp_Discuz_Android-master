@@ -65,7 +65,6 @@ public class ClanApplication extends Application {
 
     }
 
-
     public static NotificationManager getNotificationManager() {
         return notificationManager;
     }

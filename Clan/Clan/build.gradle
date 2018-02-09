@@ -38,17 +38,16 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3.1'
     //    compile 'cn.jiguang.sdk:jpush:3.1.0'  // 此处以JPush 3.0.9 版本为例。
     //    compile 'cn.jiguang.sdk:jcore:1.1.8'  // 此处以JCore 1.1.7 版本为例。
-    compile files('D:/newyishi/BigApp_Discuz_Android-master/libs/jcore-android-1.1.8.jar')
-    compile files('D:/newyishi/BigApp_Discuz_Android-master/libs/jpush-android-3.1.0.jar')
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
-//    compile 'com.allenliu.versionchecklib:library:1.5'
+    //    compile 'com.allenliu.versionchecklib:library:1.5'
     compile 'org.jetbrains:annotations-java5:15.0'
+    compile files('D:/newyishi/BigApp_Discuz_Android-master/libs/tbs_sdk.jar')
 }
 
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.0.1"
+    buildToolsVersion "22.0.1"
 
     sourceSets {
         main {
@@ -113,6 +112,9 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LGPL2.1'
 //        exclude 'lib/arm64-v8a/libgif.so'
     }
 

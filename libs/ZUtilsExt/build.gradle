@@ -6,7 +6,7 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile project(path: ':ShareSDK')
     compile project(path: ':ClanBase')
-    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.4.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
 }
 
 android {
