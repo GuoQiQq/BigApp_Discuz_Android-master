@@ -4,7 +4,7 @@ apply plugin: 'android-library'
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     compile project(':ZUtils')
-    compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.android.support:recyclerview-v7:22.1.1'
     compile 'com.nineoldandroids:library:2.4.0'

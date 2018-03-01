@@ -219,6 +219,7 @@ public class TabholderFragment extends Fragment {
             }
         };
 
+        //站内信点击入口
         OnTabClickListener.OnItemClickListener onItemClickListener = new OnTabClickListener.OnItemClickListener() {
             @Override
             public boolean onItemClick(View v, int position) {

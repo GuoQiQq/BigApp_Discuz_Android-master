@@ -37,6 +37,7 @@ public class ThreadAndArticleUtils extends ContentUtils {
         } else
             IntentUtils.gotoNextActivity(context, ThreadPublishActivity.class);
     }
+    //发帖入口
     public static void addThread1(Activity context,Integer num) {
 //        if (ClanUtils.isToLogin(context, null, Activity.RESULT_OK, false)) {
 //            return;
